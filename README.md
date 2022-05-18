@@ -14,9 +14,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 # Contest setup
 
-## 🐺 C4: Set up repos
-- [ ] Add sponsor to this private repo with 'maintain' level access.
-
 ## ⭐️ Sponsor: Provide contest details
 
 Under "SPONSORS ADD INFO HERE" heading below, include the following:
@@ -55,7 +52,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-05-rubicon-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts May 23, 2022 20:00 UTC
-- Ends May 27, 2022 19:59 UTC
+- Ends May 28, 2022 19:59 UTC
 
 This repo will be made public before the start of the contest. (C4 delete this line when made public)
 
