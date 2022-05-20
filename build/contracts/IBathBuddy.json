@@ -1,0 +1,543 @@
+{
+  "contractName": "IBathBuddy",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "sharesWithdrawn",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "initialTotalSupply",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "poolFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "release",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"sharesWithdrawn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialTotalSupply\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"poolFee\",\"type\":\"uint256\"}],\"name\":\"release\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"release(address,address,uint256,uint256,uint256)\":{\"details\":\"Modified function of the underlying to only release the user's relative share and send it directly to them\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"release(address,address,uint256,uint256,uint256)\":{\"notice\":\"Releases the withdrawer's relative share of all vested tokens directly to them with their withdrawal\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IBathBuddy.sol\":\"IBathBuddy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IBathBuddy.sol\":{\"keccak256\":\"0xeb4219b492211653f24c1e1666ccb72eef16b75b62e9461d3d3f88ccc1cd2da2\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://b8fbbc2195f6a4356fdb7363ad31cffda3454e2352e86f09cfa24e9034441a4d\",\"dweb:/ipfs/QmVFJJPDfprFrkqmTmDQsgHmiDhmBhq28dtFRcyJhhZKKd\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: BUSL-1.1\n\npragma solidity >=0.7.6;\n\nimport \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\n\ninterface IBathBuddy {\n    /// @notice Releases the withdrawer's relative share of all vested tokens directly to them with their withdrawal\n    /// @dev Modified function of the underlying to only release the user's relative share and send it directly to them\n    function release(\n        IERC20 token,\n        address recipient,\n        uint256 sharesWithdrawn,\n        uint256 initialTotalSupply,\n        uint256 poolFee\n    ) external;\n}\n",
+  "sourcePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IBathBuddy.sol",
+  "ast": {
+    "absolutePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IBathBuddy.sol",
+    "exportedSymbols": {
+      "IBathBuddy": [
+        5214
+      ],
+      "IERC20": [
+        13399
+      ]
+    },
+    "id": 5215,
+    "license": "BUSL-1.1",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5198,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "38:24:2"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 5199,
+        "nodeType": "ImportDirective",
+        "scope": 5215,
+        "sourceUnit": 13400,
+        "src": "64:56:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 5214,
+        "linearizedBaseContracts": [
+          5214
+        ],
+        "name": "IBathBuddy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 5200,
+              "nodeType": "StructuredDocumentation",
+              "src": "149:232:2",
+              "text": "@notice Releases the withdrawer's relative share of all vested tokens directly to them with their withdrawal\n @dev Modified function of the underlying to only release the user's relative share and send it directly to them"
+            },
+            "functionSelector": "1921f0bb",
+            "id": 5213,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "release",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5211,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5202,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5213,
+                  "src": "412:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13399",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5201,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13399,
+                    "src": "412:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13399",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5204,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5213,
+                  "src": "434:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5203,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "434:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5206,
+                  "mutability": "mutable",
+                  "name": "sharesWithdrawn",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5213,
+                  "src": "461:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5205,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "461:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5208,
+                  "mutability": "mutable",
+                  "name": "initialTotalSupply",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5213,
+                  "src": "494:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5207,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5210,
+                  "mutability": "mutable",
+                  "name": "poolFee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5213,
+                  "src": "530:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5209,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "530:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "402:149:2"
+            },
+            "returnParameters": {
+              "id": 5212,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "560:0:2"
+            },
+            "scope": 5214,
+            "src": "386:175:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5215,
+        "src": "122:441:2"
+      }
+    ],
+    "src": "38:526:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IBathBuddy.sol",
+      "exportedSymbols": {
+        "IBathBuddy": [
+          5214
+        ],
+        "IERC20": [
+          13399
+        ]
+      },
+      "license": "BUSL-1.1"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 5198,
+        "name": "PragmaDirective",
+        "src": "38:24:2"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 13400,
+          "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+          "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+          "scope": 5215,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 5199,
+        "name": "ImportDirective",
+        "src": "64:56:2"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            5214
+          ],
+          "name": "IBathBuddy",
+          "scope": 5215
+        },
+        "children": [
+          {
+            "attributes": {
+              "functionSelector": "1921f0bb",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "release",
+              "scope": 5214,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice Releases the withdrawer's relative share of all vested tokens directly to them with their withdrawal\n @dev Modified function of the underlying to only release the user's relative share and send it directly to them"
+                },
+                "id": 5200,
+                "name": "StructuredDocumentation",
+                "src": "149:232:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "token",
+                      "scope": 5213,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "IERC20",
+                          "referencedDeclaration": 13399,
+                          "type": "contract IERC20"
+                        },
+                        "id": 5201,
+                        "name": "UserDefinedTypeName",
+                        "src": "412:6:2"
+                      }
+                    ],
+                    "id": 5202,
+                    "name": "VariableDeclaration",
+                    "src": "412:12:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "recipient",
+                      "scope": 5213,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 5203,
+                        "name": "ElementaryTypeName",
+                        "src": "434:7:2"
+                      }
+                    ],
+                    "id": 5204,
+                    "name": "VariableDeclaration",
+                    "src": "434:17:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "sharesWithdrawn",
+                      "scope": 5213,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5205,
+                        "name": "ElementaryTypeName",
+                        "src": "461:7:2"
+                      }
+                    ],
+                    "id": 5206,
+                    "name": "VariableDeclaration",
+                    "src": "461:23:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "initialTotalSupply",
+                      "scope": 5213,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5207,
+                        "name": "ElementaryTypeName",
+                        "src": "494:7:2"
+                      }
+                    ],
+                    "id": 5208,
+                    "name": "VariableDeclaration",
+                    "src": "494:26:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "poolFee",
+                      "scope": 5213,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5209,
+                        "name": "ElementaryTypeName",
+                        "src": "530:7:2"
+                      }
+                    ],
+                    "id": 5210,
+                    "name": "VariableDeclaration",
+                    "src": "530:15:2"
+                  }
+                ],
+                "id": 5211,
+                "name": "ParameterList",
+                "src": "402:149:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5212,
+                "name": "ParameterList",
+                "src": "560:0:2"
+              }
+            ],
+            "id": 5213,
+            "name": "FunctionDefinition",
+            "src": "386:175:2"
+          }
+        ],
+        "id": 5214,
+        "name": "ContractDefinition",
+        "src": "122:441:2"
+      }
+    ],
+    "id": 5215,
+    "name": "SourceUnit",
+    "src": "38:526:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2022-05-20T22:17:11.885Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "release(address,address,uint256,uint256,uint256)": {
+        "details": "Modified function of the underlying to only release the user's relative share and send it directly to them"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "release(address,address,uint256,uint256,uint256)": {
+        "notice": "Releases the withdrawer's relative share of all vested tokens directly to them with their withdrawal"
+      }
+    },
+    "version": 1
+  }
+}
