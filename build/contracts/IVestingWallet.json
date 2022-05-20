@@ -1,0 +1,637 @@
+{
+  "contractName": "IVestingWallet",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "beneficiary",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "release",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint64",
+          "name": "timestamp",
+          "type": "uint64"
+        }
+      ],
+      "name": "vestedAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"beneficiary\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"release\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"timestamp\",\"type\":\"uint64\"}],\"name\":\"vestedAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IVestingWallet.sol\":\"IVestingWallet\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IVestingWallet.sol\":{\"keccak256\":\"0x683c797cfa651a9c9f80722320fcc136f05810001170385751ec53ce3d0e5a8a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ce3f4e4afe774e3414ad884f73672ff8e806d86bf37c5ec64238f8937f5991a\",\"dweb:/ipfs/QmQC2k5ZXVvubJuwCxM7JU3aYd6BCJjh2ZWTK64rkWed9o\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.7.6;\n\ninterface IVestingWallet {\n    function beneficiary() external view returns (address);\n\n    function release(address token) external;\n\n    function vestedAmount(address token, uint64 timestamp)\n        external\n        view\n        returns (uint256);\n}\n",
+  "sourcePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IVestingWallet.sol",
+  "ast": {
+    "absolutePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IVestingWallet.sol",
+    "exportedSymbols": {
+      "IVestingWallet": [
+        5597
+      ]
+    },
+    "id": 5598,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5577,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:9"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 5597,
+        "linearizedBaseContracts": [
+          5597
+        ],
+        "name": "IVestingWallet",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "38af3eed",
+            "id": 5582,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "beneficiary",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5578,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:2:9"
+            },
+            "returnParameters": {
+              "id": 5581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5580,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5582,
+                  "src": "136:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5579,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "136:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "135:9:9"
+            },
+            "scope": 5597,
+            "src": "90:55:9",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "19165587",
+            "id": 5587,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "release",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5585,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5584,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5587,
+                  "src": "168:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5583,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "168:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "167:15:9"
+            },
+            "returnParameters": {
+              "id": 5586,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "191:0:9"
+            },
+            "scope": 5597,
+            "src": "151:41:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "810ec23b",
+            "id": 5596,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vestedAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5592,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5589,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5596,
+                  "src": "220:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5588,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "220:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5591,
+                  "mutability": "mutable",
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5596,
+                  "src": "235:16:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 5590,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "235:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "219:33:9"
+            },
+            "returnParameters": {
+              "id": 5595,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5594,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5596,
+                  "src": "300:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5593,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "300:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "299:9:9"
+            },
+            "scope": 5597,
+            "src": "198:111:9",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5598,
+        "src": "59:252:9"
+      }
+    ],
+    "src": "33:279:9"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IVestingWallet.sol",
+      "exportedSymbols": {
+        "IVestingWallet": [
+          5597
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 5577,
+        "name": "PragmaDirective",
+        "src": "33:24:9"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            5597
+          ],
+          "name": "IVestingWallet",
+          "scope": 5598
+        },
+        "children": [
+          {
+            "attributes": {
+              "functionSelector": "38af3eed",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "beneficiary",
+              "scope": 5597,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5578,
+                "name": "ParameterList",
+                "src": "110:2:9"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 5582,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 5579,
+                        "name": "ElementaryTypeName",
+                        "src": "136:7:9"
+                      }
+                    ],
+                    "id": 5580,
+                    "name": "VariableDeclaration",
+                    "src": "136:7:9"
+                  }
+                ],
+                "id": 5581,
+                "name": "ParameterList",
+                "src": "135:9:9"
+              }
+            ],
+            "id": 5582,
+            "name": "FunctionDefinition",
+            "src": "90:55:9"
+          },
+          {
+            "attributes": {
+              "functionSelector": "19165587",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "release",
+              "scope": 5597,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "token",
+                      "scope": 5587,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 5583,
+                        "name": "ElementaryTypeName",
+                        "src": "168:7:9"
+                      }
+                    ],
+                    "id": 5584,
+                    "name": "VariableDeclaration",
+                    "src": "168:13:9"
+                  }
+                ],
+                "id": 5585,
+                "name": "ParameterList",
+                "src": "167:15:9"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5586,
+                "name": "ParameterList",
+                "src": "191:0:9"
+              }
+            ],
+            "id": 5587,
+            "name": "FunctionDefinition",
+            "src": "151:41:9"
+          },
+          {
+            "attributes": {
+              "functionSelector": "810ec23b",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "vestedAmount",
+              "scope": 5597,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "token",
+                      "scope": 5596,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 5588,
+                        "name": "ElementaryTypeName",
+                        "src": "220:7:9"
+                      }
+                    ],
+                    "id": 5589,
+                    "name": "VariableDeclaration",
+                    "src": "220:13:9"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "timestamp",
+                      "scope": 5596,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint64",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint64",
+                          "type": "uint64"
+                        },
+                        "id": 5590,
+                        "name": "ElementaryTypeName",
+                        "src": "235:6:9"
+                      }
+                    ],
+                    "id": 5591,
+                    "name": "VariableDeclaration",
+                    "src": "235:16:9"
+                  }
+                ],
+                "id": 5592,
+                "name": "ParameterList",
+                "src": "219:33:9"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 5596,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5593,
+                        "name": "ElementaryTypeName",
+                        "src": "300:7:9"
+                      }
+                    ],
+                    "id": 5594,
+                    "name": "VariableDeclaration",
+                    "src": "300:7:9"
+                  }
+                ],
+                "id": 5595,
+                "name": "ParameterList",
+                "src": "299:9:9"
+              }
+            ],
+            "id": 5596,
+            "name": "FunctionDefinition",
+            "src": "198:111:9"
+          }
+        ],
+        "id": 5597,
+        "name": "ContractDefinition",
+        "src": "59:252:9"
+      }
+    ],
+    "id": 5598,
+    "name": "SourceUnit",
+    "src": "33:279:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2022-05-20T22:17:11.891Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,1372 @@
+{
+  "contractName": "IRubiconMarket",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "pay_amt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "pay_gem",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "buy_amt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "buy_gem",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pos",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "matching",
+          "type": "bool"
+        }
+      ],
+      "name": "offer",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "sell_gem",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "buy_gem",
+          "type": "address"
+        }
+      ],
+      "name": "getBestOffer",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getOffer",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"cancel\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"sell_gem\",\"type\":\"address\"},{\"internalType\":\"contract IERC20\",\"name\":\"buy_gem\",\"type\":\"address\"}],\"name\":\"getBestOffer\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getOffer\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"pay_amt\",\"type\":\"uint256\"},{\"internalType\":\"contract IERC20\",\"name\":\"pay_gem\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"buy_amt\",\"type\":\"uint256\"},{\"internalType\":\"contract IERC20\",\"name\":\"buy_gem\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"pos\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"matching\",\"type\":\"bool\"}],\"name\":\"offer\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IRubiconMarket.sol\":\"IRubiconMarket\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IRubiconMarket.sol\":{\"keccak256\":\"0xf4af0ae8761f25b5b4679d474c633478d2eaf899da2921905fcde483f8d83da3\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://1eb932b3c5eb36f2f6d1645d4ec39612d7a4d03003fa5e3055b9dc169892a01f\",\"dweb:/ipfs/QmW32f9nz8qBzxGDi3mo12oXNKuFeP4HUEoJfQq762dKTP\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: BUSL-1.1\n\npragma solidity >=0.7.6;\n\nimport \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\n\ninterface IRubiconMarket {\n    function cancel(uint256 id) external;\n\n    function offer(\n        uint256 pay_amt, //maker (ask) sell how much\n        IERC20 pay_gem, //maker (ask) sell which token\n        uint256 buy_amt, //maker (ask) buy how much\n        IERC20 buy_gem, //maker (ask) buy which token\n        uint256 pos, //position to insert offer, 0 should be used if unknown\n        bool matching //match \"close enough\" orders?\n    ) external returns (uint256);\n\n    // Get best offer\n    function getBestOffer(IERC20 sell_gem, IERC20 buy_gem)\n        external\n        view\n        returns (uint256);\n\n    // get offer\n    function getOffer(uint256 id)\n        external\n        view\n        returns (\n            uint256,\n            IERC20,\n            uint256,\n            IERC20\n        );\n}\n",
+  "sourcePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IRubiconMarket.sol",
+  "ast": {
+    "absolutePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IRubiconMarket.sol",
+    "exportedSymbols": {
+      "IERC20": [
+        13399
+      ],
+      "IRubiconMarket": [
+        5555
+      ]
+    },
+    "id": 5556,
+    "license": "BUSL-1.1",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5509,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "38:24:7"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 5510,
+        "nodeType": "ImportDirective",
+        "scope": 5556,
+        "sourceUnit": 13400,
+        "src": "64:56:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 5555,
+        "linearizedBaseContracts": [
+          5555
+        ],
+        "name": "IRubiconMarket",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "40e58ee5",
+            "id": 5515,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancel",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5513,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5512,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5515,
+                  "src": "169:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5511,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "169:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "168:12:7"
+            },
+            "returnParameters": {
+              "id": 5514,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:7"
+            },
+            "scope": 5555,
+            "src": "153:37:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e1a6f014",
+            "id": 5532,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "offer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5517,
+                  "mutability": "mutable",
+                  "name": "pay_amt",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5532,
+                  "src": "220:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5516,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "220:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5519,
+                  "mutability": "mutable",
+                  "name": "pay_gem",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5532,
+                  "src": "273:14:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13399",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5518,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13399,
+                    "src": "273:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13399",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5521,
+                  "mutability": "mutable",
+                  "name": "buy_amt",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5532,
+                  "src": "328:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5520,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "328:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5523,
+                  "mutability": "mutable",
+                  "name": "buy_gem",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5532,
+                  "src": "380:14:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13399",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5522,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13399,
+                    "src": "380:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13399",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5525,
+                  "mutability": "mutable",
+                  "name": "pos",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5532,
+                  "src": "434:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5524,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "434:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5527,
+                  "mutability": "mutable",
+                  "name": "matching",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5532,
+                  "src": "511:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5526,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "210:351:7"
+            },
+            "returnParameters": {
+              "id": 5531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5530,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5532,
+                  "src": "580:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5529,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "580:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "579:9:7"
+            },
+            "scope": 5555,
+            "src": "196:393:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "0374fc6f",
+            "id": 5541,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBestOffer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5537,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5534,
+                  "mutability": "mutable",
+                  "name": "sell_gem",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5541,
+                  "src": "639:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13399",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5533,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13399,
+                    "src": "639:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13399",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5536,
+                  "mutability": "mutable",
+                  "name": "buy_gem",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5541,
+                  "src": "656:14:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13399",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5535,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13399,
+                    "src": "656:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13399",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "638:33:7"
+            },
+            "returnParameters": {
+              "id": 5540,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5539,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5541,
+                  "src": "719:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5538,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "719:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "718:9:7"
+            },
+            "scope": 5555,
+            "src": "617:111:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "4579268a",
+            "id": 5554,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOffer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5544,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5543,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5554,
+                  "src": "769:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5542,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "769:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "768:12:7"
+            },
+            "returnParameters": {
+              "id": 5553,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5546,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5554,
+                  "src": "841:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5545,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "841:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5548,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5554,
+                  "src": "862:6:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13399",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5547,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13399,
+                    "src": "862:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13399",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5550,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5554,
+                  "src": "882:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5549,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "882:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5552,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5554,
+                  "src": "903:6:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13399",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 5551,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13399,
+                    "src": "903:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13399",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "827:92:7"
+            },
+            "scope": 5555,
+            "src": "751:169:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5556,
+        "src": "122:800:7"
+      }
+    ],
+    "src": "38:885:7"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/bghughes/workspace/2022-05-rubicon/contracts/interfaces/IRubiconMarket.sol",
+      "exportedSymbols": {
+        "IERC20": [
+          13399
+        ],
+        "IRubiconMarket": [
+          5555
+        ]
+      },
+      "license": "BUSL-1.1"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 5509,
+        "name": "PragmaDirective",
+        "src": "38:24:7"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 13400,
+          "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+          "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+          "scope": 5556,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 5510,
+        "name": "ImportDirective",
+        "src": "64:56:7"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            5555
+          ],
+          "name": "IRubiconMarket",
+          "scope": 5556
+        },
+        "children": [
+          {
+            "attributes": {
+              "functionSelector": "40e58ee5",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "cancel",
+              "scope": 5555,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "scope": 5515,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5511,
+                        "name": "ElementaryTypeName",
+                        "src": "169:7:7"
+                      }
+                    ],
+                    "id": 5512,
+                    "name": "VariableDeclaration",
+                    "src": "169:10:7"
+                  }
+                ],
+                "id": 5513,
+                "name": "ParameterList",
+                "src": "168:12:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5514,
+                "name": "ParameterList",
+                "src": "189:0:7"
+              }
+            ],
+            "id": 5515,
+            "name": "FunctionDefinition",
+            "src": "153:37:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "e1a6f014",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "offer",
+              "scope": 5555,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "pay_amt",
+                      "scope": 5532,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5516,
+                        "name": "ElementaryTypeName",
+                        "src": "220:7:7"
+                      }
+                    ],
+                    "id": 5517,
+                    "name": "VariableDeclaration",
+                    "src": "220:15:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "pay_gem",
+                      "scope": 5532,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "IERC20",
+                          "referencedDeclaration": 13399,
+                          "type": "contract IERC20"
+                        },
+                        "id": 5518,
+                        "name": "UserDefinedTypeName",
+                        "src": "273:6:7"
+                      }
+                    ],
+                    "id": 5519,
+                    "name": "VariableDeclaration",
+                    "src": "273:14:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "buy_amt",
+                      "scope": 5532,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5520,
+                        "name": "ElementaryTypeName",
+                        "src": "328:7:7"
+                      }
+                    ],
+                    "id": 5521,
+                    "name": "VariableDeclaration",
+                    "src": "328:15:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "buy_gem",
+                      "scope": 5532,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "IERC20",
+                          "referencedDeclaration": 13399,
+                          "type": "contract IERC20"
+                        },
+                        "id": 5522,
+                        "name": "UserDefinedTypeName",
+                        "src": "380:6:7"
+                      }
+                    ],
+                    "id": 5523,
+                    "name": "VariableDeclaration",
+                    "src": "380:14:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "pos",
+                      "scope": 5532,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5524,
+                        "name": "ElementaryTypeName",
+                        "src": "434:7:7"
+                      }
+                    ],
+                    "id": 5525,
+                    "name": "VariableDeclaration",
+                    "src": "434:11:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "matching",
+                      "scope": 5532,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 5526,
+                        "name": "ElementaryTypeName",
+                        "src": "511:4:7"
+                      }
+                    ],
+                    "id": 5527,
+                    "name": "VariableDeclaration",
+                    "src": "511:13:7"
+                  }
+                ],
+                "id": 5528,
+                "name": "ParameterList",
+                "src": "210:351:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 5532,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5529,
+                        "name": "ElementaryTypeName",
+                        "src": "580:7:7"
+                      }
+                    ],
+                    "id": 5530,
+                    "name": "VariableDeclaration",
+                    "src": "580:7:7"
+                  }
+                ],
+                "id": 5531,
+                "name": "ParameterList",
+                "src": "579:9:7"
+              }
+            ],
+            "id": 5532,
+            "name": "FunctionDefinition",
+            "src": "196:393:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "0374fc6f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getBestOffer",
+              "scope": 5555,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "sell_gem",
+                      "scope": 5541,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "IERC20",
+                          "referencedDeclaration": 13399,
+                          "type": "contract IERC20"
+                        },
+                        "id": 5533,
+                        "name": "UserDefinedTypeName",
+                        "src": "639:6:7"
+                      }
+                    ],
+                    "id": 5534,
+                    "name": "VariableDeclaration",
+                    "src": "639:15:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "buy_gem",
+                      "scope": 5541,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "IERC20",
+                          "referencedDeclaration": 13399,
+                          "type": "contract IERC20"
+                        },
+                        "id": 5535,
+                        "name": "UserDefinedTypeName",
+                        "src": "656:6:7"
+                      }
+                    ],
+                    "id": 5536,
+                    "name": "VariableDeclaration",
+                    "src": "656:14:7"
+                  }
+                ],
+                "id": 5537,
+                "name": "ParameterList",
+                "src": "638:33:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 5541,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5538,
+                        "name": "ElementaryTypeName",
+                        "src": "719:7:7"
+                      }
+                    ],
+                    "id": 5539,
+                    "name": "VariableDeclaration",
+                    "src": "719:7:7"
+                  }
+                ],
+                "id": 5540,
+                "name": "ParameterList",
+                "src": "718:9:7"
+              }
+            ],
+            "id": 5541,
+            "name": "FunctionDefinition",
+            "src": "617:111:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "4579268a",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getOffer",
+              "scope": 5555,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "scope": 5554,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5542,
+                        "name": "ElementaryTypeName",
+                        "src": "769:7:7"
+                      }
+                    ],
+                    "id": 5543,
+                    "name": "VariableDeclaration",
+                    "src": "769:10:7"
+                  }
+                ],
+                "id": 5544,
+                "name": "ParameterList",
+                "src": "768:12:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 5554,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5545,
+                        "name": "ElementaryTypeName",
+                        "src": "841:7:7"
+                      }
+                    ],
+                    "id": 5546,
+                    "name": "VariableDeclaration",
+                    "src": "841:7:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 5554,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "IERC20",
+                          "referencedDeclaration": 13399,
+                          "type": "contract IERC20"
+                        },
+                        "id": 5547,
+                        "name": "UserDefinedTypeName",
+                        "src": "862:6:7"
+                      }
+                    ],
+                    "id": 5548,
+                    "name": "VariableDeclaration",
+                    "src": "862:6:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 5554,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5549,
+                        "name": "ElementaryTypeName",
+                        "src": "882:7:7"
+                      }
+                    ],
+                    "id": 5550,
+                    "name": "VariableDeclaration",
+                    "src": "882:7:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 5554,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "IERC20",
+                          "referencedDeclaration": 13399,
+                          "type": "contract IERC20"
+                        },
+                        "id": 5551,
+                        "name": "UserDefinedTypeName",
+                        "src": "903:6:7"
+                      }
+                    ],
+                    "id": 5552,
+                    "name": "VariableDeclaration",
+                    "src": "903:6:7"
+                  }
+                ],
+                "id": 5553,
+                "name": "ParameterList",
+                "src": "827:92:7"
+              }
+            ],
+            "id": 5554,
+            "name": "FunctionDefinition",
+            "src": "751:169:7"
+          }
+        ],
+        "id": 5555,
+        "name": "ContractDefinition",
+        "src": "122:800:7"
+      }
+    ],
+    "id": 5556,
+    "name": "SourceUnit",
+    "src": "38:885:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2022-05-20T22:17:11.890Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

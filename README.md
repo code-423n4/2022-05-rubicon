@@ -1,50 +1,3 @@
-# ✨ So you want to sponsor a contest
-
-This `README.md` contains a set of checklists for our contest collaboration.
-
-Your contest will use two repos: 
-- **a _contest_ repo** (this one), which is used for scoping your contest and for providing information to contestants (wardens)
-- **a _findings_ repo**, where issues are submitted. 
-
-Ultimately, when we launch the contest, this contest repo will be made public and will contain the smart contracts to be reviewed and all the information needed for contest participants. The findings repo will be made public after the contest is over and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the contest sponsor (⭐️)**.
-
----
-
-# Contest setup
-
-## ⭐️ Sponsor: Provide contest details
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [X] Name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-- [X] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [X] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [X] Describe anything else that adds any special logic that makes your approach unique
-- [X] Identify any areas of specific concern in reviewing the code
-- [X] Add all of the code to this repo that you want reviewed
-- [X] Create a PR to this repo with the above changes.
-
----
-
-# Contest prep
-
-## ⭐️ Sponsor: Contest prep
-- [X] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [X] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2021-06-gro/blob/main/README.md))
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 8 hours prior to contest start time.**
-- [ ] Ensure that you have access to the _findings_ repo where issues will be submitted.
-- [ ] Promote the contest on Twitter (optional: tag in relevant protocols, etc.)
-- [ ] Share it with your own communities (blog, Discord, Telegram, email newsletters, etc.)
-- [ ] Optional: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
-
 # Rubicon contest details
 - $47,500 USDC main award pot
 - $2,500 USDC gas optimization award pot
@@ -56,13 +9,35 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 This repo will be made public before the start of the contest. (C4 delete this line when made public)
 
-## Contest Scope
+## Contest Scope 👀
 
 The scope of this contest is the core of the Rubicon Protocol v1, an open order book and democratized liquidity system for Ethereum. *Rubicon Pools is a novel order book liquidity system and is the main focus of the contest*. This system makes it easy for LPs to enter single-asset liquidity positions, strategists to market-make & trade with that liquidity, and both LPs and strategists to profit. The core contract of the protocol is *RubiconMarket.sol*; this contract contains the order book that handles all ERC-20/ERC-20 trading on Rubicon.
 
 Please see the 4 core contracts that are the main focus of this audit and more details below (those under “Core”); effectively this is `rubiconPools/` and `RubiconMarket`. Note, there are more minor contracts noted under “Periphery” - these are also included in the scope of the contest. 
 
-### Resources
+# Rubicon Protocol ⚔️
+
+Rubicon is an open order book protocol for Ethereum. The protocol is Layer 2-native and will launch across multiple L2 networks such as [Optimism](https://optimism.io/), [Arbitrum](https://arbitrum.io/), [zkSync](https://zksync.io/), and [Polygon](https://polygon.technology/).
+
+The Rubicon protocol is currently live on the Optimistic Ethereum network. You can use it today on the [Rubicon App](https://app.rubicon.finance).
+
+## Docs 📓
+
+For detailed documentation of the Rubicon protocol please visit our [docs](https://docs.rubicon.finance/)
+
+### Protocol Overview 🏔️
+
+A number of key smart contracts house the primary operations of the Rubicon protocol. Please see below for an overview of our current smart contract infrastructure.
+
+![Rubicon v1_ RubiconMarket](https://user-images.githubusercontent.com/32072172/159312652-a8a82329-844c-4315-8b0c-dd6d85cf49ce.png)
+
+At a high level, Rubicon revolves around a core smart contract `RubiconMarket.sol` that facilitates peer-to-peer trades of ERC-20 tokens using an open order book.
+
+[Rubicon Pools](https://docs.rubicon.finance/contracts/rubicon-pools) is a separate system of smart contracts that enables passive liquidity provisioning on the Rubicon order books.
+
+### Resources 🛠️
+
+Please note, this repo is a reproduction of v1.2.0 found here: https://github.com/RubiconDeFi/rubicon-protocol-v1.
 
 Here are a few resources to help you learn more about [Rubicon](https://rubicon.finance):
 
@@ -71,7 +46,7 @@ Here are a few resources to help you learn more about [Rubicon](https://rubicon.
 - [Documentation](https://docs.rubicon.finance/)
 - *[Live Deployments](https://docs.rubicon.finance/rubicon-docs/contracts/deployments)*
 
-## Smart Contracts
+## Smart Contracts 🧠
 
 ### Core
 
@@ -103,11 +78,11 @@ This is the core order book contract of the protocol. Rubicon Market allows for 
 
 This contract acts as a convenient router for calls that access the core protocol. Features of the Router include the ability to `swap` between any two ERC-20s by simply trading through `RubiconMarket`. Moreover, the Router provides helpful queries like `getBookFromPair` and has wrappers to support native asset (like ETH or MATIC) interactions with the core protocol.
 
-### BathBuddy.sol
+### BathBuddy.sol 
 
 This contract makes it easy for Bath Tokens to payout their withdrawers any `bonusTokens` they may have accrued while staking in the Bath Token (e.g. network incentives/governance tokens). This contract is a minor modification of the [Open Zeppelin Vesting Wallet contract](https://docs.openzeppelin.com/contracts/4.x/api/finance#VestingWallet). BathBuddy `release`s a user their relative share of the pool’s total vested bonus token during the `withdraw` call on `BathToken.sol`. This vesting occurs linearly over Unix time and is unchanged from the OZ contract; modifications were only made to the custom `release()` implementation.
 
-### Notes
+### Notes 📑
 
 ### Transparent Upgradeable Proxy Usage
 
@@ -115,10 +90,19 @@ Please note, in practice, Rubicon uses Transparent Upgradeable Proxies to make s
 
 Please note that there are some deprecated storage variables that are *intentionally left in core contracts to allow for consistent contract abis across networks and respect the proxy upgrade pattern on Optimism.* These storage variables will not be paid any bounty and are included for consistent contracts cross-network despite additional deployment costs.
 
-### Areas of Focus for Wardens
+### Areas of Focus for Wardens 😅
 
 - Any *loss* of or *malicious*, non-strategist use of *LP funds* in `BathToken`. Any non-approved strategist (chosen by admin EOA) moving LP funds (excluding the rightful owners) is an error in v1.
 - Bath Tokens should account for their underlying assets and payout depositors correctly when withdrawing.
 - Gas optimization
 - Re-entrancy or potentially malicious external calls
 - No outside, non-approved actors should modify any state variables within the system. Note, that this should only be possible in `openBathTokenSpawnAndSignal` in which case the user-created Bath Token is added to the system, but still only manageable from a strategist perspective from system-approved strategists
+
+## Run Tests and Compile
+```bash
+$ npm i
+$ (in a separate instance) npm run ganache
+$ npm run test
+$ truffle compile #to compile
+```
+
