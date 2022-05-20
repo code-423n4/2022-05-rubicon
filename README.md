@@ -7,8 +7,6 @@
 - Starts May 23, 2022 20:00 UTC
 - Ends May 28, 2022 19:59 UTC
 
-This repo will be made public before the start of the contest. (C4 delete this line when made public)
-
 ## Contest Scope 👀
 
 The scope of this contest is the core of the Rubicon Protocol v1, an open order book and democratized liquidity system for Ethereum. *Rubicon Pools is a novel order book liquidity system and is the main focus of the contest*. This system makes it easy for LPs to enter single-asset liquidity positions, strategists to market-make & trade with that liquidity, and both LPs and strategists to profit. The core contract of the protocol is *RubiconMarket.sol*; this contract contains the order book that handles all ERC-20/ERC-20 trading on Rubicon.
