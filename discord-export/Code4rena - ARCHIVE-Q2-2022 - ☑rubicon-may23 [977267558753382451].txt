@@ -1,0 +1,216 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q2-2022 / ☑rubicon-may23
+==============================================================
+
+[05/20/2022 5:57 PM] kartoonjoy
+👋 Hello and welcome to the contest channel for the $50K USDC **Rubicon** contest!
+
+📆 Contest opens May 23, 2022 at 20:00 UTC and runs through May 28, 2022 at 19:59 UTC (5 days).
+
+Please give a warm welcome to the Rubicon team, particularly @benjamin | rubicon.finance and @forrest, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-05-rubicon-contest
+
+{Embed}
+https://code4rena.com/contests/2022-05-rubicon-contest
+Code4rena Rubicon contest
+$50,000 USDC
+23 May 2022—28 May 2022
+Code4rena - ARCHIVE-Q2-2022 - ☑rubicon-may23 [977267558753382451].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+🚀 (9) 👋 (4) 
+
+[05/20/2022 6:04 PM] forrestn
+Will share more details here once we are closer to the contest! Wardens give us your strength :C4Keycap: 💪
+
+{Reactions}
+C4Keycap (19) hi5 (8) 
+
+[05/23/2022 7:37 PM] forrestn
+Hey Wardens, our contest starts in 30 minutes!
+
+Here is the Rubicon v1 repo for the contest: https://github.com/code-423n4/2022-05-rubicon
+
+And here is our documentation: https://docs.rubicon.finance/rubicon-docs/
+(let us know if any areas need improvements)
+
+If you have any questions, please DM @benjamin | rubicon.finance , and if he is taking a while to respond you can submit them to me as a backup 💪 
+
+If you have a high level question feel free to ask it in here and we will get back to you ASAP 🚀 
+
+Good luck, have fun
+
+{Reactions}
+hi5 (5) 
+
+[05/23/2022 8:46 PM] benjamin4
+Hey y'all! Stoked to run the audit this week. Please let me know if you have any questions and feel free to DM me directly (please mention you are from here if so) 🤠
+
+{Reactions}
+👋 (9) 
+
+[05/24/2022 2:13 PM] benjamin4
+Gm!
+
+{Reactions}
+👋 (12) 
+
+[05/25/2022 2:00 PM] benjamin4
+gm y'all! Thanks for all the great questions so far 🤠
+
+{Reactions}
+👋 (4) 
+
+[05/25/2022 4:16 PM] benjamin4
+Noticing I have a couple potentially misleading comments due to the convos... keep the great questions coming and I'll clear anything up in the DMs if you have any confusion 🙂
+
+{Reactions}
+👍 
+
+[05/25/2022 4:23 PM] benjamin4
+One thing to note, there are no intentions to turn `permissionedStrategists` false until we have a new v2 protocol which we will likely re-audit. So most of these external functions are effectively admin only within the Rubicon Pools system (v1, this version)
+
+
+[05/25/2022 4:40 PM] benjamin4
+Also note, there's no function to initialize a `rewardsVestingWallet` yet though when that time comes, I'll add an external `onlyBathHouse` function on `BathToken.sol` to handle this and have the admin write in the new vesting wallet (which will be a `BathBuddy.sol`) to each BathToken's storage. These bath buddies will represent the contract that will hold bonus ERC-20 rewards. In the near-term, this will be OP as our project received a phase 0 allocation 🙂
+
+
+[05/25/2022 4:40 PM] benjamin4
+^ This is possible due to everything being proxy-wrapped today, ability to iterate fast ⚡
+
+
+[05/26/2022 12:05 AM] bearprince
+what's with the strategistUtility contract? I don't see it on the repo
+
+
+[05/26/2022 2:31 PM] un_for_given
+Hi @benjamin | rubicon.finance , You mentioned in code RubiconMarket is based on "open-source work of Oasis DEX". would you please provide us with their diff so we could concentrate on what you have changed in your protocol?
+
+
+[05/26/2022 2:56 PM] benjamin4
+Gm everyone!
+
+{Reactions}
+👋 
+
+[05/26/2022 2:57 PM] benjamin4
+This is a utility contract that right now does nothing but execute a UNI trade. We are using this as a tool kit for executing strategist trades and decided to keep it off of the audit. LMK if you would like more details 🙂
+
+
+[05/26/2022 2:58 PM] benjamin4
+Totally! Everything that was changed has added Natspec comments. The only main changes are light storage changes (mostly unused tbh) to the high-level RubiconMarket and *adding the bolt-on fee functionality in the SimpleMarket `buy`*
+
+
+[05/26/2022 2:59 PM] benjamin4
+Note, the vast majority of the logic is unchanged, really just the fee and making ExpiringMarket never expire 🙂
+
+
+[05/26/2022 2:59 PM] eccentricexit
+hey benjamin, I'm DMin you
+
+{Reactions}
+👍 
+
+[05/26/2022 2:59 PM] ellahi
+i would like to dm as well 🙂
+
+
+[05/26/2022 3:04 PM] benjamin4
+HMU!
+
+
+[05/26/2022 3:05 PM] benjamin4
+Here's a helpful resource on Proxies that I forgot to link in the comments. Note that we use `TransparentUpgradeableProxy`'s for all contracts in this system today so we can iterate the code while centralized: https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies
+
+{Embed}
+https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies
+Proxy Upgrade Pattern - OpenZeppelin Docs
+Code4rena - ARCHIVE-Q2-2022 - ☑rubicon-may23 [977267558753382451].txt_Files/social-89974.png
+
+
+[05/26/2022 3:05 PM] ellahi
+sent friend request, cant dm otherwise 🙂
+
+{Reactions}
+👍 
+
+[05/26/2022 3:09 PM] benjamin4
+Please also note, `isClosed()` should always return false and is a bit vestigial on `RubiconMarket.sol`
+
+
+[05/26/2022 9:34 PM] rotcivegaf
+The RubiconRouter.sol is in the scope?
+
+"Note, there are more minor contracts noted under “Periphery” - these are also included in the scope of the contest."
+This refer to peripheral_contracts?
+
+
+[05/26/2022 10:24 PM] benjamin4
+RubiconRouter is! All the contracts listed on the contest page by name 🙂
+
+{Reactions}
+👍 
+
+[05/28/2022 5:40 PM] forrestn
+Hi wardens, our contest ends in about 2 hours so make sure to get your findings in if you have not already!
+
+
+[05/28/2022 8:02 PM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Rubicon** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: the **Rubicon** team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+🎉 (8) 
+
+[05/29/2022 2:06 AM] elku.cryptos
+I have to make an edit in my gas report. I know you guys are busy. but would be good before you go through the report.
+
+{Reactions}
+🔐 (2) 
+
+[06/09/2022 12:15 PM] blockdev
+Hi, any update on the status?
+
+
+[06/09/2022 1:36 PM] kartoonjoy
+this contest is currently moving to judging.
+
+
+[06/23/2022 1:28 PM] blockdev
+Hi, any new update on this one?
+
+
+[06/23/2022 1:57 PM] elku.cryptos
+it seems to be in judging. see the 2nd last message in announcements.
+
+{Reactions}
+thankyou 
+
+[07/01/2022 1:41 AM] uvvirus
+update?
+
+
+[07/01/2022 2:11 AM] hickuphh3
+post judging QA
+
+{Reactions}
+thankyou (2) 
+
+[07/16/2022 6:02 AM] blockdev
+will the findings be made public?
+
+
+[07/16/2022 7:49 AM] 100proof
+Yes. A report is in progress.
+
+
+==============================================================
+Exported 35 message(s)
+==============================================================
